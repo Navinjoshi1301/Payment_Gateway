@@ -36,6 +36,8 @@ public class PageController {
         // Creating order
         Order order = client.Orders.create(obj);
         System.out.println(order);
+        System.out.println(obj.toString());
+
         return order.toString();
     }
 }
