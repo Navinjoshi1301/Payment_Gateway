@@ -3,16 +3,16 @@ package com.paytm.paytm.controllers;
 import java.util.Map;
 
 import org.json.JSONObject;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.razorpay.Order;
 import com.razorpay.RazorpayClient;
 
-@Controller
+@RestController("/user")
 public class PageController {
  
     @RequestMapping("/")
@@ -22,7 +22,7 @@ public class PageController {
     }
  
     // Create order
-    @PostMapping("user/create_order")
+    @PostMapping("/create_order")
     @ResponseBody
     public String createOrder(@RequestBody Map<String, Object> data) throws Exception {
 
